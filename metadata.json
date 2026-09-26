@@ -1,0 +1,6 @@
+{
+  "name": "Sweet Seventeen Keisya Felita",
+  "description": "Website kejutan ulang tahun Sweet Seventeen Keisya Felita bernuansa pastel pink dengan musik, galeri polaroid, lilin interaktif, dan wish wall.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+.font-script {
+  font-family: 'Dancing Script', cursive;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(3deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-3deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(236, 72, 153, 0.65);
+  }
+}
+
+@keyframes flameFlicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    filter: drop-shadow(0 0 8px #f59e0b);
+  }
+  25% {
+    transform: scale(1.08, 0.95) rotate(2deg);
+    filter: drop-shadow(0 0 12px #fbbf24);
+  }
+  50% {
+    transform: scale(0.95, 1.1) rotate(-2deg);
+    filter: drop-shadow(0 0 9px #f97316);
+  }
+  75% {
+    transform: scale(1.05, 1.02) rotate(1deg);
+    filter: drop-shadow(0 0 14px #fde047);
+  }
+}
+
+.animate-flame {
+  animation: flameFlicker 0.6s infinite ease-in-out;
+  transform-origin: bottom center;
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-float-rev {
+  animation: floatReverse 7s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* Washi tape scrapbook effect */
+.washi-tape {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1deg);
+  width: 90px;
+  height: 24px;
+  background-color: rgba(254, 205, 211, 0.75);
+  backdrop-filter: blur(2px);
+  border-left: 2px dashed rgba(244, 114, 182, 0.4);
+  border-right: 2px dashed rgba(244, 114, 182, 0.4);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  z-index: 10;
+}
